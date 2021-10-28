@@ -52,3 +52,10 @@ GROUP BY vac.location, dea.population)
 SELECT *, (vaccinations/population)*100 AS PercentVaccinations
 FROM vaccin
 ORDER BY 4 DESC;
+-- 7. Total Populasi Dunia yang sudah di vaksin penuh
+SELECT vac.location, MAX(dea.population) AS Population, MAX(vac.people_fully_vaccinated) AS TotalFullyVaccinated
+FROM `belajar-328708.Portfolio.CovidDeaths`dea
+JOIN `belajar-328708.Portfolio.CovidVaccinations` vac
+ON dea.date = vac.date AND dea.location = vac.location
+GROUP BY vac.location
+HAVING vac.location = 'World';
