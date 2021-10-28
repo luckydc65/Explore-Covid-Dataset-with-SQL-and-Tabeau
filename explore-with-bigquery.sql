@@ -37,3 +37,18 @@ FROM `belajar-328708.Portfolio.CovidDeaths`
 WHERE NOT continent = ''
 GROUP BY location
 ORDER BY NumberPopulation DESC;
+
+-- 6. Negara yang sudah mendapatkan vaksin penuh
+WITH vaccin AS
+(
+SELECT vac.location, dea.population ,MAX(vac.people_fully_vaccinated) AS vaccinations
+FROM `belajar-328708.Portfolio.CovidVaccinations` vac
+JOIN `belajar-328708.Portfolio.CovidDeaths` dea
+ON vac.location = dea.location 
+    AND vac.date = dea.date
+WHERE NOT vac.continent = ''
+GROUP BY vac.location, dea.population)
+
+SELECT *, (vaccinations/population)*100 AS PercentVaccinations
+FROM vaccin
+ORDER BY 4 DESC;
