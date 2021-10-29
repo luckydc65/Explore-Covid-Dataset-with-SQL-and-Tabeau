@@ -1,4 +1,7 @@
 # Explore-Covid-Dataset-with-SQL-and-Tabeau
-Analyzing the spread of covid 19 infection,
-To see a visualization of the spread of the covid-19 virus, see https://public.tableau.com/app/profile/lucky.dwi.cahya/viz/Latihan1_16354100864210/Dashboard1 
+I created this project in order to practice my skills in SQL and Tableau, this project is about analyzing the spread of covid 19 infection and vaccinations. <br />
+To see a visualization of the spread of the covid-19 virus, see https://public.tableau.com/app/profile/lucky.dwi.cahya/viz/Latihan1_16354100864210/Dashboard1 <br />
 Then, for the visualization of percentage vaccinations by country in https://public.tableau.com/app/profile/lucky.dwi.cahya/viz/PercentageofVaccinationsbyCountry/Dashboard1
+
+#  Source Dataset
+I got the dataset for this project from https://ourworldindata.org/covid-deaths
